@@ -1,0 +1,117 @@
+[
+    {
+        "category": 1,
+        "categoryName": "He who shall not be named",
+        "questions": [
+            {
+                "value": 100
+            },
+            {
+                "value": 200
+            },
+            {
+                "value": 300
+            },
+            {
+                "value": 400
+            },
+            {
+                "value": 500
+            }
+        ]
+    },
+    {
+        "category": 2,
+        "categoryName": "Hogwarts",
+        "questions": [
+            {
+                "value": 100,
+                "trivia": "What are the four Hogwarts houses?",
+                "answer": "What is Gryffindor, Slytherin, HufflePuff, Ravenclaw"
+            },
+            {
+                "value": 200,
+                "trivia": "How are students sorted into their houses?",
+                "answer": "What is the sorting hat"
+            },
+            {
+                "value": 300,
+                "trivia": "Where is the secret meeting place of Dumbledore's Army?",
+                "answer": "What is the room of requirement"
+            },
+            {
+                "value": 400,
+                "trivia": "What is the name of the 'antisocial' ghost of the Slytherin house, and is the only one who can control peeves?",
+                "answer": "Who is the Bloody Baron"
+            },
+            {
+                "value": 500,
+                "trivia": "Who destroyed Ravenclaw's diadem?",
+                "answer": "Who is Vincent Crabbe"
+            }
+        ]
+    },
+    {
+        "category": 3,
+        "categoryName": "You're a Wizard Harry",
+        "questions": [
+            {
+                "value": 100
+            },
+            {
+                "value": 200
+            },
+            {
+                "value": 300
+            },
+            {
+                "value": 400
+            },
+            {
+                "value": 500
+            }
+        ]
+    },
+    {
+        "category": 4,
+        "categoryName": "Goblet of Fire",
+        "questions": [
+            {
+                "value": 100
+            },
+            {
+                "value": 200
+            },
+            {
+                "value": 300
+            },
+            {
+                "value": 400
+            },
+            {
+                "value": 500
+            }
+        ]
+    },
+    {
+        "category": 5,
+        "categoryName": "Magical Redheads",
+        "questions": [
+            {
+                "value": 100
+            },
+            {
+                "value": 200
+            },
+            {
+                "value": 300
+            },
+            {
+                "value": 400
+            },
+            {
+                "value": 500
+            }
+        ]
+    }
+]
