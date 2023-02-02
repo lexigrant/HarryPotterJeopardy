@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Timer from './Components/Timer';
 import triviaData from './data/triviaData';
 
 function App() {
@@ -17,9 +18,14 @@ const [gameActive, setGameActive] = useState(false)
       } 
     }
 
+    const timeHasRunOut = () => {
+
+    }
+
 
   return (
     <div>
+      {<Timer timeHasRunOutCallback={timeHasRunOut}/>}
       <h1 style={{fontFamily: "HarryP-MVZ6w"}} className="gameTitle">Harry Potter Jeopardy</h1>
       <div className="bigContainer">
       {!gameActive ? <button style={{fontFamily: "HarryP-MVZ6w"}} onClick={() => {
