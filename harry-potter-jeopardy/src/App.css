@@ -36,32 +36,72 @@
     transform: rotate(360deg);
   }
 }
+.playButton{
+  cursor: pointer;
+  width: 30%;
+}
 .gameTitle {
   text-align: center;
+  font-size: 45px;
+  color: rgb(207, 147, 59);
 }
+.score {
+  text-align: center;
+  color: aliceblue;
+  margin: 20px;
+}
+
 .bigContainer {
   display: flex;
   justify-content: center;
 }
 .board {
   display: flex;
-  /* flex-direction: row; */
+  
 }
 .categoryContainer {
   padding-left: 10px;
   padding-right: 10px;
+  color: aliceblue;
+  text-align: center;
+  margin-top: 60px;
 }
+.categoryTitle{
+  word-wrap:normal;
+}
+
 .questionContainer {
-  border: 1px solid black;
+  border: 1px solid aliceblue;
   margin-top: 10px;
   padding: 10px;
+  width: 160px;
+  height: 38px;
+  background-color: #282c34;
 }
+.questionContainer:hover {
+  color: rgb(207, 147, 59);
+}
+.trivia{
+  color: aliceblue;
+  font-size: 50px;
+  margin-top: 60px;
+}
+.answerCorrectly {
+  color: aliceblue;
+  font-size: 30px;
+  margin-top: 50px;
+}
+.timer{
+  color: rgb(207, 147, 59);
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: 30px;
+}
+
 
 
 .values {
   text-align: center;
   
 }
-/* .body {
-  font-family: "HarryP-MVZ6w";
-} */
+

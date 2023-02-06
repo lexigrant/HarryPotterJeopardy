@@ -19,9 +19,9 @@ function Timer(props) {
 
 
 
-    const display = time > 0 ? <p>
+    const display = time > 0 ? <p style={{ fontFamily: "HarryP-MVZ6w" }} className="timer">
         {time} seconds remaining
-    </p> : <p>You've run out of time</p>
+    </p> : <p style={{ fontFamily: "HarryP-MVZ6w" }} className="timer">You've run out of time</p>
 
     return display;
 }
