@@ -39,11 +39,15 @@
 .playButton{
   cursor: pointer;
   width: 30%;
+  margin-top: 20%;
+  font-size: 30px;
 }
 .gameTitle {
   text-align: center;
   font-size: 45px;
   color: rgb(207, 147, 59);
+  padding-top: 30px;
+
 }
 .score {
   text-align: center;
@@ -57,8 +61,8 @@
 }
 .board {
   display: flex;
-  
 }
+
 .categoryContainer {
   padding-left: 10px;
   padding-right: 10px;
@@ -69,7 +73,6 @@
 .categoryTitle{
   word-wrap:normal;
 }
-
 .questionContainer {
   border: 1px solid aliceblue;
   margin-top: 10px;
@@ -97,11 +100,32 @@
   font-size: 40px;
   margin-top: 30px;
 }
-
-
-
 .values {
   text-align: center;
   
 }
+.gameWon {
+  color: aliceblue;
+  font-size: 60px;
+  color: rgb(207, 147, 59);
+  margin-top: 55px;
+}
+.backgroundImage {
+  height: 100vh;
+  background-image: url(assets/HarryPotter.jpg);
+  background-size: cover;
+}
 
+@media (max-width: 930px) {
+  .board {
+    flex-direction: column;
+  }
+ .backgroundImage {
+  background-repeat: repeat-y;
+  height: 250vh;
+  
+ }
+ .categoryValuesContainer{
+  margin-left: 20px;
+}
+  }

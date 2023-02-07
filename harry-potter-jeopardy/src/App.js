@@ -3,7 +3,7 @@ import './App.css';
 import ActiveCard from './Components/ActiveCard';
 import Timer from './Components/Timer';
 import triviaData from './data/triviaData';
-import backgroundImage from "./assets/HarryPotter.jpg"
+
 
 function App() {
 
@@ -18,6 +18,7 @@ function App() {
   const [playerScores, setPlayerScores] = useState({ player1: 0, player2: 0 })
   const [playerTurn, setPlayerTurn] = useState(player1)
   const [cardData, setCardData] = useState([]);
+  const [isGameOver, setIsGameOver] = useState(false);
 
   // Added two fields to my existing data this would help with scalability if we wanted more than 5 categories 
   useEffect(() => {
@@ -88,8 +89,60 @@ function App() {
     setShowAnswer(false)
   }
 
+  const renderCorrectScreen = () => {
+
+    const shouldShowEndScreen = !activeCard && isGameOver;
+
+    if(shouldShowEndScreen) {
+      let endScreenText = "";
+      if (playerScores.player1 === playerScores.player2) {
+        endScreenText = "It's a tie!"
+      } else {
+        const winner = playerScores.player1 > playerScores.player2 ? player1 : player2
+        endScreenText = `${winner} has won the game!`
+      }
+
+      return <p className="gameWon" style={{ fontFamily: "HarryP-MVZ6w" }}>{endScreenText}</p> 
+    }
+
+
+
+    return !showActiveCard ? <div className="board">
+    {cardData.map(category => {
+      return (
+        <div className="categoryContainer">
+          <h2 style={{ fontFamily: "HarryP-MVZ6w" }} className="categoryTitle">{category.categoryName}</h2>
+          <div className="categoryValuesContainer">
+            {category.questions.map(card => {
+              return (
+                <div className="questionContainer" onClick={() => {
+                  flipCard(card)
+                }}>
+                  {!card.hasBeenFlipped ? <p style={{ fontFamily: "HarryP-MVZ6w" }} className="values">${card.value}</p> : undefined}
+                </div>)
+            })}
+          </div>
+        </div>
+      )
+    })}
+  </div> :
+    <div style={{flex: "1", textAlign: "center"}}>
+      <ActiveCard activeCardData={activeCard} playerTurn={playerTurn} showAnswer={showAnswer} cleanup={cleanup} toggleTurn={toggleTurn} updatePoints={updatePoints} />
+      <Timer timeHasRunOutCallback={timeHasRunOut} />
+    </div>
+  }
+
+  useEffect(() => {
+    const isAtLeastOneCardNotFlipped = cardData.some(category => category.questions.some(question => !question.hasBeenFlipped));
+    console.log(isAtLeastOneCardNotFlipped)
+    setIsGameOver(!isAtLeastOneCardNotFlipped);
+  }, [setCardFlipState])
+
+
+  
+
   return (
-    <div style={{ height: "100vh", backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover" }}>
+    <div className="backgroundImage">
 
       <h1 style={{ fontFamily: "HarryP-MVZ6w" }} className="gameTitle">Harry Potter Jeopardy</h1>
 
@@ -103,31 +156,8 @@ function App() {
         {!gameActive ? <button style={{ fontFamily: "HarryP-MVZ6w" }} onClick={() => {
           setGameActive(true)
         }} className="playButton">Play</button> :
-          !showActiveCard ? <div className="board">
-            {cardData.map(category => {
-              return (
-                <div className="categoryContainer">
-                  <h2 style={{ fontFamily: "HarryP-MVZ6w" }} className="categoryTitle">{category.categoryName}</h2>
-                  <div className="categoryValuesContainer">
-                    {category.questions.map(card => {
-                      return (
-                        <div className="questionContainer" onClick={() => {
-                          flipCard(card)
-                        }}>
-                          {!card.hasBeenFlipped ? <p style={{ fontFamily: "HarryP-MVZ6w" }} className="values">${card.value}</p> : undefined}
-                        </div>)
-                    })}
-                  </div>
-                </div>
-              )
-            })}
-          </div> :
-            <div style={{flex: "1", textAlign: "center"}}>
-              <ActiveCard activeCardData={activeCard} playerTurn={playerTurn} showAnswer={showAnswer} cleanup={cleanup} toggleTurn={toggleTurn} updatePoints={updatePoints} />
-              <Timer timeHasRunOutCallback={timeHasRunOut} />
-            </div>
+          renderCorrectScreen()
         }
-
       </div>
     </div>
   )
