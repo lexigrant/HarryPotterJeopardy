@@ -4,19 +4,29 @@
         "categoryName": "He who shall not be named",
         "questions": [
             {
-                "value": 100
+                "value": 100,
+                "trivia": "How did Harry get the lightening bolt scar on his forehead?",
+                "answer": "Who is Lord Voldemort gave it to him when he tried to murder him with the killing curse"
             },
             {
-                "value": 200
+                "value": 200,
+                "trivia": "What is Voldemort's real name?",
+                "answer": "Who is Tom Riddle"
             },
             {
-                "value": 300
+                "value": 300,
+                "trivia": "Why did Lord Voldemort create seven horcruxes?",
+                "answer": "What is to sustain immortality"
             },
             {
-                "value": 400
+                "value": 400,
+                "trivia": "What is Lord Voldemort's wand made of?",
+                "answer": "What is yew with a phoenix feather"
             },
             {
-                "value": 500
+                "value": 500,
+                "trivia": "What is Lord Voldemort's boggart?",
+                "answer": "What is his own corpse"
             }
         ]
     },
@@ -56,19 +66,29 @@
         "categoryName": "You're a Wizard Harry",
         "questions": [
             {
-                "value": 100
+                "value": 100,
+                "trivia": "Who was Harry living with in the Muggle world?",
+                "answer": "Who is the Dursleys"
             },
             {
-                "value": 200
+                "value": 200,
+                "trivia": "What is house is Harry Potter sorted into?",
+                "answer": "What is Gryffindor"
             },
             {
-                "value": 300
+                "value": 300,
+                "trivia": "What is Harry's position is the wizarding sport Quidditch?",
+                "answer": "What is seeker"
             },
             {
-                "value": 400
+                "value": 400,
+                "trivia": "How did Harry get rid of Aunt Marge when she insulted Harry's parents?",
+                "answer": "What is using the inflating charm"
             },
             {
-                "value": 500
+                "value": 500,
+                "trivia": "What potion did Harry make in Slughorn's class, where he received top marks for doing it correctly?",
+                "answer": "What is Draught of Living Death"
             }
         ]
     },
@@ -77,40 +97,60 @@
         "categoryName": "Goblet of Fire",
         "questions": [
             {
-                "value": 100
+                "value": 100,
+                "trivia": "Besides Harry who else in Gryffindor was selected to compete in the Triwizard Tournament? ?",
+                "answer": "Who is Cedric Diggory"
             },
             {
-                "value": 200
+                "value": 200,
+                "trivia": "What was the first task of the Triwizard Tournament?",
+                "answer": "What is retrieve a golden egg from a dragon"
             },
             {
-                "value": 300
+                "value": 300,
+                "trivia": "Who pretended to be Mad Eye Moody in the Goblet of Fire?",
+                "answer": "Who is Bartemius Crouch Junior"
             },
             {
-                "value": 400
+                "value": 400,
+                "trivia": "Who was Harry's date to the Yule ball?",
+                "answer": "Who is Parvati Patil"
             },
             {
-                "value": 500
+                "value": 500,
+                "trivia": "What character, who first appeared in Chamber of Secrets is completely left out of Goblet of Fire?",
+                "answer": "Who is Dobby"
             }
         ]
     },
     {
         "category": 5,
-        "categoryName": "Magical Redheads",
+        "categoryName": "Magical Friends",
         "questions": [
             {
-                "value": 100
+                "value": 100,
+                "trivia": "Who are Harry's two best friends?",
+                "answer": "Who is Ron Weasley and Hermoine Granger"
             },
             {
-                "value": 200
+                "value": 200,
+                "trivia": "What are the names of Ron's parents?",
+                "answer": "Who is Arthur and Molly Weasley"
             },
             {
-                "value": 300
+                "value": 300,
+                "trivia": "What animal can Remus Lupin turn into?",
+                "answer": "What is a Werewolf"
             },
             {
-                "value": 400
+                "value": 400,
+                "trivia": "What does Ron Weasley have a fear of?",
+                "answer": "What is insects"
             },
             {
-                "value": 500
+                "value": 500,
+                "trivia": "Which magical device did Albus Dumbeldore use to save and review his memories?",
+                "answer": "What is a Pensieve"
             }
         ]
     }
