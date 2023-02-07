@@ -1,10 +1,15 @@
 
-function ActiveCard({activeCardData, playerTurn, showAnswer, cleanup, toggleTurn, updatePoints}) {
+function ActiveCard({ activeCardData, playerTurn, showAnswer, cleanup, toggleTurn, updatePoints, answerEarlyCallback }) {
 
     return (
         <>
-            
-            {!showAnswer ? <p className="trivia" style={{ fontFamily: "HarryP-MVZ6w" }}>{activeCardData.trivia}</p> : undefined}
+
+            {!showAnswer ?
+                <>
+                    <button className="showAnswerButton" style={{ fontFamily: "HarryP-MVZ6w" }} onClick={answerEarlyCallback}>Show Answer</button>
+                    <p className="trivia" style={{ fontFamily: "HarryP-MVZ6w" }}>{activeCardData.trivia}</p>
+                </>
+                : undefined}
             {showAnswer ?
                 <>
                     <p className="trivia" style={{ fontFamily: "HarryP-MVZ6w" }}>{activeCardData.answer}</p>

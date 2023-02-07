@@ -122,6 +122,11 @@
   width: 4%;
   font-size: 30px;
 }
+.showAnswerButton {
+  cursor: pointer;
+  width: 20%;
+  font-size: 30px;
+}
 
 @media (max-width: 930px) {
   .board {

@@ -19,6 +19,7 @@ function App() {
   const [playerTurn, setPlayerTurn] = useState(player1)
   const [cardData, setCardData] = useState([]);
   const [isGameOver, setIsGameOver] = useState(false);
+  const [timeEndedEarly, setTimeEndedEarly] = useState(false);
 
   // Added two fields to my existing data this would help with scalability if we wanted more than 5 categories 
   useEffect(() => {
@@ -83,10 +84,16 @@ function App() {
     setShowAnswer(true)
   }
 
+  const endTimeEarly = () => {
+    setShowAnswer(true)
+    setTimeEndedEarly(true);
+  }
+
   const cleanup = () => {
     setShowActiveCard(false)
     setActiveCard(undefined)
     setShowAnswer(false)
+    setTimeEndedEarly(false);
   }
 
   const renderCorrectScreen = () => {
@@ -127,8 +134,8 @@ function App() {
     })}
   </div> :
     <div style={{flex: "1", textAlign: "center"}}>
-      <ActiveCard activeCardData={activeCard} playerTurn={playerTurn} showAnswer={showAnswer} cleanup={cleanup} toggleTurn={toggleTurn} updatePoints={updatePoints} />
-      <Timer timeHasRunOutCallback={timeHasRunOut} />
+      <ActiveCard activeCardData={activeCard} playerTurn={playerTurn} showAnswer={showAnswer} cleanup={cleanup} toggleTurn={toggleTurn} updatePoints={updatePoints} answerEarlyCallback={endTimeEarly}/>
+      {!timeEndedEarly ? <Timer timeHasRunOutCallback={timeHasRunOut} /> : undefined}
     </div>
   }
 
